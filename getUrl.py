@@ -58,6 +58,7 @@ def yt_download(urlList):
 	count = 0
 	for url in urlList :
 		url = 'https://www.youtube.com' +  url
+		#with youtube_dl.YoutubeDL({'format':'137'}) as ydl:
 		with youtube_dl.YoutubeDL({'format':'137'}) as ydl:
 			ydl.download([url])
 			count +=1
